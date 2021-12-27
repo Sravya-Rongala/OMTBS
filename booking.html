@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>seat booking</title>
+<script>
+        function enableButton2() {
+            document.getElementById("button2").disabled = false;
+        }
+        function enableButton3() {
+            document.getElementById("button3").disabled = false;
+        }
+    </script>
+    <style media="screen">
+     
+      label {
+    display: block;
+    font-family: "cursive","cursive", cursive;
+}
+div.relative{
+position: fixed;
+top: 140px;
+left: 700px;
+}
+body {
+  background-image: url('https://image.freepik.com/free-photo/top-view-movie-tickets-blue-background-with-copy-space_23-2148457884.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ font-family: "cursive","cursive", cursive;
+  
+}
+input,
+label {
+    margin: .4rem 0;
+   font-family: "cursive","cursive", cursive;
+}
+    </style>
+  </head>
+  <body cellspacing=0>
+<form name="f1" action="booking.jsp" method="POST">
+<div style="position: fixed;
+top: 10px;
+left: 620px;">
+    <h2>BOOK YOUR <strong>SHOW</strong></h2>
+</div>
+<div style="position: fixed;
+top: 50px;
+left: 500px;">
+    <h1>BOOK YOUR ENTERTAINMENT</h1>
+</div>
+<div class="relative">
+<label for="userid">Username:</label>
+  <input type="text" id="userid" name="userid"><br>
+<label for="movie"> Select Movie</label>
+<select name="movie" id="movie">
+  <option value="none" selected>Movie</option>
+	<option value="M.S.Dhoni" >M.S.Dhoni</option>
+	<option value="Nishabdham" >Nishabdham</option>
+	<option value="Vakeel Saab" >Vakeel Saab</option>
+                 <option value="Jathi Ratnalu" >Jathi Ratnalu</option>
+</select>
+<br>
+<label for="date">Select Date</label>
+<input type="date" id="date" name="date"
+value="2021-07-04"
+min="2012-07-04" max="2021-07-10">
+<br>
+<label for="slot">Select Slot</label>
+<select name="slot" id="slot">
+  <option value="none" selected>Slots</option>
+  <option value="Morning Show" name="show">9:00-12:00</option>
+  <option value="Matinee Show" name="show">2:00-5:00</option>
+  <option value="First Show" name="show">6:00-9:00</option>
+  <option value="Second Show" name="show">9:00-12:00</option>
+</select>
+<label for="seat">Select Seats</label>
+<select name="seat" id="seat">
+  <option value="none" selected>Select your Seat Type</option>
+	<option value="vip" >VIP</option>
+	<option value="balcony" >BALCONY</option>
+	<option value="box" >BOX</option>
+</select>
+<br>
+<label for="noofseats">Choose no of Seats</label>
+<input type="number" id="noofseats" name="noofseats"
+value="0"
+min="1" max="10">
+<br>
+</div>
+<div style="position: fixed;
+top: 600px;
+left: 940px;">
+ <input type="button" id="button1" value="Confirm" onclick="enableButton2(),enableButton3()"  />
+<input type="reset" value="Reset">
+<form action="payment.html" method="POST">
+    <input type="submit" id="button2" value="Pay" disabled />
+</form>
+<form action="login1.html" method="POST">
+   <input type="submit" id="button3" value="Cancel" disabled />
+</form>
+</div>
+</form>
+</body>
+</html>
